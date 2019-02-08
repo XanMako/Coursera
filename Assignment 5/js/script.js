@@ -1,6 +1,6 @@
-$(function () { // Same as document.addEventListener("DOMContentLoaded"...
+$(function () { // Same as document.addEventListener("DOMContentLoaded"...)
 
-  // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
+  // Same as document.querySelector("#navbarToggle").addEventListener("blur",...)
   $("#navbarToggle").blur(function (event) {
     var screenWidth = window.innerWidth;
     if (screenWidth < 768) {
@@ -88,7 +88,6 @@ $ajaxUtils.sendGetRequest(
 });
 // *** finish **
 
-
 // Builds HTML for the home page based on categories array
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
@@ -102,8 +101,8 @@ function buildAndShowHomeHTML (categories) {
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
-      var chosenCategoryShortName =  chooseRandomCategory(categories).short_name;
 
+      var chosenCategoryShortName =  chooseRandomCategory(categories).short_name;
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
@@ -117,8 +116,8 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var homeHtmlToInsertIntoMainPage = insertProperty( homeHtml, "randomCategoryShortName" , "'"+chosenCategoryShortName+ "'");
 
+      var homeHtmlToInsertIntoMainPage = insertProperty( homeHtml, "randomCategoryShortName" , "'"+chosenCategoryShortName+ "'");
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
@@ -159,7 +158,6 @@ dc.loadMenuItems = function (categoryShort) {
     buildAndShowMenuItemsHTML);
 };
 
-
 // Builds HTML for the categories page based on the data
 // from the server
 function buildAndShowCategoriesHTML (categories) {
@@ -184,7 +182,6 @@ function buildAndShowCategoriesHTML (categories) {
     },
     false);
 }
-
 
 // Using categories data and snippets html
 // build categories view HTML to be inserted into page
@@ -214,8 +211,6 @@ function buildCategoriesViewHtml(categories,
   return finalHtml;
 }
 
-
-
 // Builds HTML for the single category page based on the data
 // from the server
 function buildAndShowMenuItemsHTML (categoryMenuItems) {
@@ -240,7 +235,6 @@ function buildAndShowMenuItemsHTML (categoryMenuItems) {
     },
     false);
 }
-
 
 // Using category and menu items data and snippets html
 // build menu items view HTML to be inserted into page
